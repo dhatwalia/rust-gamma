@@ -2,6 +2,12 @@ use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 
+fn capacity(n: u32) {
+    let range: u128 = 2_u128.pow(n - 1);
+    println!("i{} can range from -{} to {}", n, range, range - 1);
+    println!("u{} can range from 0 to {}\n", n, (range - 1) * 2 + 1);
+}
+
 fn main() {
     println!("Enter a number between 1 and 100 : ");
 
@@ -23,5 +29,11 @@ fn main() {
         Ordering::Equal => println!("You win!"),
     }
 
-    println!("The number is {}.", secret_number)
+    println!("The number is {}.\n", secret_number);
+
+    capacity(8);
+    capacity(16);
+    capacity(32);
+    capacity(64);
+    capacity(128);
 }

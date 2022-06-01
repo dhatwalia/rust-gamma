@@ -8,7 +8,7 @@ fn capacity(n: u32) {
     println!("u{} can range from 0 to {}\n", n, (range - 1) * 2 + 1);
 }
 
-fn main() {
+fn game() {
     println!("Enter a number between 1 and 100 : ");
 
     let mut guess = String::new();
@@ -30,6 +30,10 @@ fn main() {
     }
 
     println!("The number is {}.\n", secret_number);
+}
+
+fn main() {
+    // game();
 
     capacity(8);
     capacity(16);
